@@ -22,7 +22,7 @@ prepare() {
 
 build() {
     # Adjust .desktop so it will work outside of AppImage container
-    sed -i -E "s|Exec=${_pkgbin}|Exec=env DESKTOPINTEGRATION=false QT_QPA_PLATFORM= /usr/bin/${_pkgbin}|"\
+    sed -i -E "s|Exec=${_pkgbin}|Exec=env DESKTOPINTEGRATION=false /usr/bin/${_pkgbin}|"\
         "squashfs-root/${_pkgbin}.desktop"
     # Fix permissions; .AppImage permissions are 700 for all directories
     chmod -R a-x+rX squashfs-root/usr
