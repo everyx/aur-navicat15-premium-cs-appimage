@@ -9,6 +9,7 @@ arch=('x86_64')
 url="https://www.navicat.com/en/navicat-15-highlights"
 license=('custom:Unlicense')
 depends=('zlib')
+makedepends=('sed' 'appimagetool-bin')
 options=(!strip)
 _appimage="${pkgname}-${pkgver}.AppImage"
 _glib2="glib2-2.68.4-1-x86_64.pkg.tar.zst"
